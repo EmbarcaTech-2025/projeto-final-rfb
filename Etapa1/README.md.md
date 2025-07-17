@@ -51,6 +51,16 @@ Produtores rurais de pequeno porte geralmente não têm acesso a dados meteorol�
 | Extensor I2C Placa         | Aumentar a Capacidade de Adicionar sensores   |
 | Caixa plástica (opcional)  | Proteção da eletrônica em campo               |
 
+## 📷 Portas da Raspberry Pi Pico W
+
+![alt text](portas.jpg)
+
+---
+
+## 📷 Placa Conectores e Sensores
+
+![alt text](pecas.jpeg)
+
 ---
 
 ## 🗓️ Entregável da Etapa 1
