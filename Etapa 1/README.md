@@ -1,22 +1,22 @@
 # 🌾 ** Estação Agroclimática Portátil**  
 
-**Institution**: Instittuto Hardware BR-DF  
-**Course**: Residência tecnologica em sistemas embarcados
-**Authors**: **Rafael Florentino Barbosa**  
-**Location**: Brasília-DF  
-**Date**: Julho de 2025  
+**Instituição**: Instituto de Hardware BR-DF  
+**Curso**: Residência tecnologica em sistemas embarcados
+**Autor**: **Rafael Florentino Barbosa**  
+**Local**: Brasília-DF  
+**Data**: Julho de 2025  
 
 ---
 
 ## 🎯 **Sobre este Repositório**  
-Este repositório contém o desenvolvimento da **Estação Agroclimática Portátil **, uma mini-estação portátil e inteligente projetada para monitorar as condições climáticas na área de pequenas plantações para agricultura familiar, incorporando sistemas eletrônicos embarcados e princípios de IoT (Internet das Coisas). O projeto se concentra no monitoramento em tempo real de parâmetros críticos, como temperatura, umidade, exposição à luz e pressão atmosferica, ao longo do tempo, possibilitando análises sazonais e tomadas de decisão mais precisas para a agricultura,qias tipos de cultura e epoca do ano melhor plantar.
+Este repositório contém o desenvolvimento da **Estação Agroclimática Portátil**, uma mini-estação portátil e inteligente projetada para monitorar as condições climáticas em pequenas plantações de agricultura familiar, incorporando sistemas eletrônicos embarcados e princípios de IoT (Internet das Coisas). O projeto se concentra no monitoramento em tempo real de parâmetros críticos, como temperatura, umidade, exposição à luz e pressão atmosférica, ao longo do tempo, possibilitando análises sazonais e tomadas de decisão mais precisas sobre quais tipos de cultura e época do ano são mais adequadas para o plantio.
 
 ---
 
 ## 🛠️ **Visão geral do projeto**  
 
 ### **Descrição do problema**  
-Produtores rurais de pequeno porte geralmente não têm acesso a dados meteorológicos locais precisos e contínuos. Essa limitação compromete o planejamento agrícola, principalmente em relação ao plantio, irrigação e colheita. Uma solução portátil e de baixo custo para coleta e visualização de dados ambientais pode trazer benefícios diretos ao desempenho e sustentabilidade da produção. 
+Produtores rurais de pequeno porte geralmente não têm acesso a dados meteorológicos locais precisos e contínuos. Essa limitação compromete o planejamento agrícola, principalmente em relação ao plantio, irrigação e colheita. Uma solução portátil e de baixo custo para coleta e visualização de dados ambientais pode trazer benefícios diretos ao desempenho e à sustentabilidade da produção.
 
 ### ⚙️ **Objetivo da Solução**  
 Desenvolver uma mini-estação portátil e inteligente que:
