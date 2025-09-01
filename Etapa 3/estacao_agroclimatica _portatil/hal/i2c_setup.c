@@ -3,7 +3,7 @@
 
 // Definições das interfaces I2C (globais)
 const I2C_interface_t i2c_hw_iface0 = { .i2c = i2c0, .sda_pin = 0,  .scl_pin = 1  };
-const I2C_interface_t i2c_hw_iface1 = { .i2c = i2c1, .sda_pin = 2, .scl_pin = 3 };
+const I2C_interface_t i2c_hw_iface1 = { .i2c = i2c1, .sda_pin = 14, .scl_pin = 15 };
 
 void setup_i2c(const I2C_interface_t *iface) {
     i2c_init(iface->i2c, 100 * 1000); // 100kHz

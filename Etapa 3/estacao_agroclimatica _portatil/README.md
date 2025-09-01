@@ -1,4 +1,3 @@
-
 # 🌾 Estação Agroclimática Portátil
 
 Este repositório contém o código-fonte e recursos para a implementação de uma **Estação Agroclimática Portátil**, desenvolvida como uma solução de monitoramento ambiental para a agricultura familiar. O sistema coleta, exibe e armazena dados climáticos essenciais (temperatura, umidade, luminosidade e pressão atmosférica) em tempo real, fornecendo informações críticas para o planejamento agronômico e tomada de decisões no campo.
@@ -37,12 +36,69 @@ cd build
 cmake ..
 make
 
-text
+## 📂 Estrutura do Código  
+```  
+├── app/
+│ └── main.c # Programa principal
+├── drivers/
+│ ├── ssd1306.c # Driver OLED SSD1306
+│ ├── ssd1306.h
+│ ├── ssd1306_i2c.c
+│ ├── ssd1306_i2c.h
+│ └── ssd1306_font.h
+├── hal/
+│ ├── AHT10.c # Leitura AHT10
+│ ├── BH1750.c # Leitura BH1750
+│ ├── BMP280.c # Leitura BMP280
+│ ├── buttons.c # Botoes A e B
+│ ├── i2c_setup.c # Configura porta i2c
+│ └── display.c # Funções do display OLED
+├── include/
+│ ├── AHT10.h
+│ ├── BH1750.h
+│ ├── BMP280.h
+│ ├── buttons.h
+│ ├── i2c_setup.h
+│ ├── FreeRTOSConfig.h
+│ ├── lwipopts.h
+│ └── display.h
+├── lib/
+│ ├── hw_config.h
+│ ├── sd_card.c
+│ └── sd_card.h
+├── no-OS-FatFS-SD-SPI-RPi-Pico/
+├── CMakeLists.txt
+└── README.md
+```  
+---
+
+## 📊 Funcionamento  
+
+  - Lê os sensores 
+  - Exibe na tela old a tela 1, onde mostra os estatus dos sensores conectados
+
+    ```
+    SD: OK
+    Luz: OK
+    Temp: OK
+    Press: OK
+    ```  
+
+  - Ao apertar o Botão A Atualiza  a tela do **OLED SSD1306** e vai para tela 2, onde mostra os valores dos sensores:  
+    ```
+    Luz: 115 LX
+    Temp: 28.1 C
+    Umid: 40.0
+    Press: 892.4 HPA
+    ```  
+ - Ao apertar o Botão B volta para tela 1 do display oled
+ - Salva dados no cacrtão SD
+---
+
 
 ## 📝 Observações Importantes
 
 - Certifique-se de que as bibliotecas estejam corretamente clonadas na raiz conforme indicado acima.
-- **Não** versionar o arquivo `credentials.h`, pois ele pode conter informações sensíveis.
 
 ## 📚 Referências e Créditos
 

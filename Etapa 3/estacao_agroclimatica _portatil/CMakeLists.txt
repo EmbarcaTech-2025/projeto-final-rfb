@@ -17,7 +17,7 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 cmake_minimum_required(VERSION 3.12)
 
 # Name project
-SET(ProjectName cartao_memoria)
+SET(ProjectName main)
 
 # Set any variables required for importing librariess
 if (DEFINED ENV{FREERTOS_PATH})
@@ -42,12 +42,15 @@ add_subdirectory(no-OS-FatFs-SD-SPI-RPi-Pico/FatFs_SPI)
 
 add_executable(${ProjectName}
     ./src/main.c
-    ./lib/sd_card.c
-    ./lib/hw_config.c
-    ./hal/BH1750.c
     ./hal/i2c_setup.c
+    ./hal/BH1750.c
+    ./hal/display.c
+    ./hal/buttons.c
     ./hal/AHT10.c
-    ./hal/BMP280.c   
+    ./hal/BMP280.c
+    ./drivers/ssd1306_i2c.c
+    ./lib/hw_config.c
+    ./lib/sd_card.c
 )
 
 target_include_directories(${ProjectName} PRIVATE

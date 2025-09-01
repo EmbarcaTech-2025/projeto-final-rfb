@@ -13,7 +13,7 @@
 
 ## 🎥 Fotos e Vídeos ##
 
-Link Video: 
+Link Video: <video controls src="video_rafael_etapa3.mp4" title="Title"></video>
 
 Fotos:
 
@@ -21,6 +21,13 @@ Fotos:
 
 ![alt text](Protótipo.jpeg)
 
+- Tela 1 do diplay OLED
+
+![alt text](Tela1.jpeg)
+
+- Tela 2 do diplay OLED
+
+![alt text](Tela2.jpeg)
 
 -  Exemplo de Dashboard caso o modulo Wifi seja implementado no futuro 
 
@@ -32,3 +39,15 @@ Durante o desenvolvimento do protótipo da Estação Agroclimática Portátil, v
 
 ## Melhorias Planejadas ##
 Entre as melhorias planejadas para as próximas versões do projeto está a utilização de uma placa PCB dedicada, o que ajudará a reduzir o excesso de fios, proporcionar maior confiabilidade das conexões e facilitar a montagem e manutenção do dispositivo. Está prevista também a implementação do módulo Wi-Fi para transmissão remota dos dados em tempo real, ampliando o potencial de monitoramento e automação agrícola. Outras melhorias incluem a adoção de um gabinete mais robusto e com melhor vedação para uso em ambientes externos, a otimização do consumo energético para aumentar a autonomia e a expansão do sistema de interface do usuário, tornando o display OLED ainda mais intuitivo e informativo.
+
+- Inserir o sensor de solo A
+
+![alt text](capacitivo.jpg)
+
+- Inserir o sensor de solo B
+
+![alt text](solo_umidade.jpg)
+
+- Inserir o sensor de chuva
+
+![alt text](sensor_chuva.jpg)
