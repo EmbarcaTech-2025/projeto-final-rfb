@@ -13,7 +13,7 @@
 
 ## 🎥 Fotos e Vídeos ##
 
-Link Video: <video controls src="video_rafael_etapa3.mp4" title="Title"></video>
+Link Video: https://youtube.com/shorts/cSL2xntXBJg?feature=share
 
 Fotos:
 
