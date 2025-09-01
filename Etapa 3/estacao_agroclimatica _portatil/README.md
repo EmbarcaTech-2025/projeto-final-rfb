@@ -1,4 +1,4 @@
-# 🌾 Estação Agroclimática Portátil
+# 🌾 Estação Agroclimática Portátil # 
 
 Este repositório contém o código-fonte e recursos para a implementação de uma **Estação Agroclimática Portátil**, desenvolvida como uma solução de monitoramento ambiental para a agricultura familiar. O sistema coleta, exibe e armazena dados climáticos essenciais (temperatura, umidade, luminosidade e pressão atmosférica) em tempo real, fornecendo informações críticas para o planejamento agronômico e tomada de decisões no campo.
 

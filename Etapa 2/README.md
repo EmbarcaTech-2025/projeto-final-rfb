@@ -1,4 +1,4 @@
-# 🌾 **Estação Agroclimática Portátil**  
+# 🌾 **Estação Agroclimática Portátil**  # 
 
 **Instituição**: Instituto de Hardware BR-DF  
 **Curso**: Residência tecnologica em sistemas embarcados
@@ -6,7 +6,7 @@
 **Local**: Brasília-DF  
 **Data**: Julho de 2025  
 
-## 🎯 **Etapa 2 - Bloco Funcionais, Diagramas, Esquemas **  
+## 🎯 **Etapa 2 - Bloco Funcionais, Diagramas, Esquemas **  ##
 
 ---
 
@@ -15,12 +15,12 @@ Este repositório contém o desenvolvimento da **Estação Agroclimática Portá
 
 ---
 
-## 🛠️ **Visão geral do projeto**  
+## 🛠️ **Visão geral do projeto**  ##
 
 ### **Descrição do problema**  
 Produtores rurais de pequeno porte geralmente não têm acesso a dados meteorológicos locais precisos e contínuos. Essa limitação compromete o planejamento agrícola, principalmente em relação ao plantio, irrigação e colheita. Uma solução portátil e de baixo custo para coleta e visualização de dados ambientais pode trazer benefícios diretos ao desempenho e à sustentabilidade da produção.
 
-### ⚙️ **Objetivo da Solução**  
+### ⚙️ **Objetivo da Solução**  ### 
 Desenvolver uma mini-estação portátil e inteligente que:
 - Monitore  **temperatura, humidade, luz e pressão** em tempo real.  
 - Emita  **Na tela OLED** os dados coletados dos sesnores.  
@@ -28,7 +28,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## ✅ **Requisitos Funcionais (RF)**  
+## ✅ **Requisitos Funcionais (RF)**  ##
 
 | Code | Functional Requirement |  
 |------|------------------------|  
@@ -43,7 +43,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## 🚫 **Requisitos não Funcionais **  
+## 🚫 **Requisitos não Funcionais **  ##
 
 | Code | Non-Functional Requirement |  
 |------|---------------------------|  
@@ -57,9 +57,9 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## 📦 **Lista de Materiais**  
+## 📦 **Lista de Materiais**  ##
 
-### 🧾 Tabela 3 - Lista de Materiais 
+### 🧾 Tabela 3 - Lista de Materiais ###
 | Item | Quantidade | Descrição |
 |------|------------|-----------|
 | Caixa de plástico ou madeira | 1 | Recipiente base para proteção dos componentes |
@@ -78,9 +78,9 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## 📦 **Lista de MAteriais**  
+## 📦 **Lista de MAteriais**  ##
 
-### 🧾 Tabela 3 - Lista de Materiais 
+### 🧾 Tabela 3 - Lista de Materiais ###
 | Item | Quantidade | Descrição |
 |------|------------|-----------|
 | Caixa de plástico ou madeira | 1 | Recipiente base para proteção dos componentes |
@@ -97,7 +97,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## **Estrutura do Projeto**  
+## **Estrutura do Projeto**  ##
 
 ### **Principais Características**  
 ✅ **Monitoramento em Tempo Real**: Sensores monitoram temperatura, umidade, luz e pressão atmosférica.  
@@ -112,9 +112,9 @@ Desenvolver uma mini-estação portátil e inteligente que:
 4. **Conectividade Wi-Fi** (opcional) Será implementada no futuro.  
 
 
-## Arquitetura do Sistema
+## Arquitetura do Sistema ##
 
-### 📷 **Diagrama de Hardware**  
+### 📷 **Diagrama de Hardware**  ###
 
 ![alt text](prototipo2.jpeg)
 
@@ -129,7 +129,7 @@ Explicação: Este diagrama detalha as conexões físicas e protocolos usados:
 Observação: componente tem endereços específicos e frequências de operação otimizadas para sua função.
 
 
-### Esquemático de hardware BitdogLb
+### Esquemático de hardware BitdogLb ###
 
 ![alt text](<mapa eletrico.jpg>)
 
@@ -190,7 +190,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ## 📊 Dados coletados
 
-### Temperatura: 27,7 °C
+### Temperatura: 27,7 °C ###
 > Temperatura do ar ao redor do sensor.
 
 - Para a maioria das plantas tropicais e hortaliças, está em uma faixa boa (25–30 °C é ideal para crescimento).  
@@ -199,7 +199,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### Umidade relativa: 32,4 %
+### Umidade relativa: 32,4 % ###
 > Mede quão úmido está o ar.
 
 - Esse valor é considerado baixo. A maioria das plantas gosta de 50–70 %.  
@@ -208,7 +208,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### Luminosidade: ~104 lux
+### Luminosidade: ~104 lux ###
 > Intensidade de luz medida.
 
 - 104 lux é bem baixo — equivale a um ambiente fechado ou sombra pesada.  
@@ -220,7 +220,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### Pressão atmosférica: 891,2 hPa
+### Pressão atmosférica: 891,2 hPa ###
 > Indica a pressão do ar no local.
 
 - O valor esperado ao nível do mar é ~1013 hPa.  
@@ -231,20 +231,20 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-## 🌾 Como usar esses dados na sua plantação
+## 🌾 Como usar esses dados na sua plantação ##
 
-### Temperatura e Umidade
+### Temperatura e Umidade ###
 - Programar alertas para irrigação se a umidade do ar ficar muito baixa por muito tempo.  
 - Detectar risco de estresse térmico em ondas de calor.
 
-### Luminosidade (Lux)
+### Luminosidade (Lux)  ###
 - Verificar se as plantas estão recebendo luz suficiente para fotossíntese.  
 - Se valores ficarem baixos mesmo durante o dia:  
   - Reposicionar mudas para mais sol.  
   - Reduzir sombreamento.  
   - Usar iluminação artificial em estufas.
 
-### Pressão atmosférica
+### Pressão atmosférica ###
 - Usar como indicador de previsão do tempo local:  
   - Queda repentina → possível chuva.  
   - Estabilidade → clima firme.  
@@ -252,12 +252,12 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### 👉 Resumo
+### 👉 Resumo ###
 - **Temp/Umidade** → saúde da planta e evaporação.  
 - **Lux** → fotossíntese / energia disponível para crescimento.  
 - **Pressão** → previsão climática e ajuste da irrigação.
 
-## 📂 Estrutura do Projeto  
+## 📂 Estrutura do Projeto   ##
 ```  
 ├── app/
 │ └── main.c # Programa principal
@@ -294,7 +294,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 ---
 
 
-## **Referências**  
+## **Referências**  ##
 
 - **Embrapa** –  Internet das Coisas testada em irrigação de precisão.  
 - **Blog Aegro**  – Irrigação de precisão: como ela pode gerar economia para a fazenda.
@@ -315,7 +315,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-## **License**  
+## **licença **  ##
 Este projeto está licenciado sob a **[MIT License](LICENSE)**.  
 
 ---  
