@@ -1,4 +1,4 @@
-# 🌾 ** Estação Agroclimática Portátil**  
+# 🌾 **Estação Agroclimática Portátil**  
 
 **Instituição**: Instituto de Hardware BR-DF  
 **Curso**: Residência tecnologica em sistemas embarcados
@@ -20,9 +20,9 @@ Produtores rurais de pequeno porte geralmente não têm acesso a dados meteorol�
 
 ### ⚙️ **Objetivo da Solução**  
 Desenvolver uma mini-estação portátil e inteligente que:
-- Monitore  **temperatura, humidade, luz e pressão** em tempo real.  
-- Emita  **Na tela OLED** os dados coletados dos sesnores.  
-- Armazene **No cartão SD** todos os dados coletados pelos sensores durante o ano para futura analize.  
+- Monitore  **temperatura, umidade, luz e pressão** em tempo real.  
+- Emita  **na tela OLED** os dados coletados dos sesnores.  
+- Armazene **no cartão SD** todos os dados coletados pelos sensores durante o ano para futura analize.  
 
 ---
 
@@ -62,17 +62,17 @@ Desenvolver uma mini-estação portátil e inteligente que:
 |------|------------|-----------|
 | Caixa de plástico ou madeira | 1 | Recipiente base para proteção dos componentes |
 | Placa BitDogLab com Raspberry Pi Pico W | 1 | Microcontrolador com periféricos integrados (OLED, botões) |
-| Placa Protoboard | 1 | conectada a entrada I2C0  |
+| Placa Protoboard | 1 | Conectada a entrada I2C0  |
 | Sensor de Temperatura e Pressão BMP280 | 1 | Sensor externo conectado via Placa Protoboard|
 | Sensor de Umidade e Temperatura AHT10 | 1 | Sensor externo conectado via Placa Protoboard |
 | Sensor de Luminosidade BH1750 | 1 | Sensor externo conectado via Placa Protoboard |
 | Placa para SDCARD SPI | 1 | Módulo externo conectado via conector IDC direto |
 | Cabos customizados XH I2C | 1 | Para conexão do sensore externos à BitDogLab |
-| Cabos jumper macho/femea | 4 | Para conexão da protoboard na entrada i2c0 da BitDogLab |
-| Cabos jumper macho/femea | 12 | Para conexão dos sensores na protoboard sensores externos à BitDogLab |
-| Fonte de energia (power bank ou bateria Li-ion) | 1 | Alimentação portátil para o sistema |
-| Botão A | 1 | Mudar Tela do Display oled |
-| Botão B | 1 | Mudar Tela do Display oled |
+| Cabos jumper macho/fêmea | 4 | Para conexão da protoboard na entrada i2c0 da BitDogLab |
+| Cabos jumper macho/fêmea | 12 | Para conexão dos sensores na protoboard sensores externos à BitDogLab |
+| Fonte de energia (Power Bank ou bateria Li-ion) | 1 | Alimentação portátil para o sistema |
+| Botão A | 1 | Mudar Tela do Display Oled |
+| Botão B | 1 | Mudar Tela do Display Oled |
 
 ---
 
@@ -121,7 +121,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## **License**  
+## **licença **  
 Este projeto está licenciado sob a **[MIT License](LICENSE)**.  
 
 ---  
