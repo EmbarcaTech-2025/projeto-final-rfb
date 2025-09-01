@@ -36,7 +36,7 @@ cd build
 cmake ..
 make
 
-## 📂 Estrutura do Código  
+## 📂 Estrutura do Projeto  
 ```  
 ├── app/
 │ └── main.c # Programa principal

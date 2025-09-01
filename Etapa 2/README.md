@@ -188,6 +188,112 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ![alt text](graficos.png)
 
+## 📊 Dados coletados
+
+### Temperatura: 27,7 °C
+> Temperatura do ar ao redor do sensor.
+
+- Para a maioria das plantas tropicais e hortaliças, está em uma faixa boa (25–30 °C é ideal para crescimento).  
+- Se passar de 35 °C, pode começar a causar estresse térmico.  
+- Se cair abaixo de 15 °C, o crescimento desacelera.
+
+---
+
+### Umidade relativa: 32,4 %
+> Mede quão úmido está o ar.
+
+- Esse valor é considerado baixo. A maioria das plantas gosta de 50–70 %.  
+- Umidade baixa pode causar ressecamento das folhas e acelerar a evaporação da água do solo.  
+- Pode ser um alerta para irrigação mais frequente ou uso de sombreamento/microaspersão para manter umidade.
+
+---
+
+### Luminosidade: ~104 lux
+> Intensidade de luz medida.
+
+- 104 lux é bem baixo — equivale a um ambiente fechado ou sombra pesada.  
+- Para cultivo:  
+  - Hortaliças precisam de 5.000 a 15.000 lux.  
+  - Plantas frutíferas e grãos precisam de 15.000–50.000 lux.  
+- Sugere que o sensor está em ambiente pouco iluminado (talvez dentro de casa ou à noite).  
+- Esses dados servem para monitorar a quantidade de luz solar recebida ao longo do dia, garantindo fotossíntese adequada.
+
+---
+
+### Pressão atmosférica: 891,2 hPa
+> Indica a pressão do ar no local.
+
+- O valor esperado ao nível do mar é ~1013 hPa.  
+- 891 hPa sugere que você está em região de maior altitude (cerca de 1000–1200 m).  
+- Útil para:  
+  - Relacionar com clima (quedas rápidas de pressão podem indicar chuva).  
+  - Ajustar cálculos de evapotranspiração.
+
+---
+
+## 🌾 Como usar esses dados na sua plantação
+
+### Temperatura e Umidade
+- Programar alertas para irrigação se a umidade do ar ficar muito baixa por muito tempo.  
+- Detectar risco de estresse térmico em ondas de calor.
+
+### Luminosidade (Lux)
+- Verificar se as plantas estão recebendo luz suficiente para fotossíntese.  
+- Se valores ficarem baixos mesmo durante o dia:  
+  - Reposicionar mudas para mais sol.  
+  - Reduzir sombreamento.  
+  - Usar iluminação artificial em estufas.
+
+### Pressão atmosférica
+- Usar como indicador de previsão do tempo local:  
+  - Queda repentina → possível chuva.  
+  - Estabilidade → clima firme.  
+- Pode ajudar a decidir irrigação (não irrigar antes de chuva prevista).
+
+---
+
+### 👉 Resumo
+- **Temp/Umidade** → saúde da planta e evaporação.  
+- **Lux** → fotossíntese / energia disponível para crescimento.  
+- **Pressão** → previsão climática e ajuste da irrigação.
+
+## 📂 Estrutura do Projeto  
+```  
+├── app/
+│ └── main.c # Programa principal
+├── drivers/
+│ ├── ssd1306.c # Driver OLED SSD1306
+│ ├── ssd1306.h
+│ ├── ssd1306_i2c.c
+│ ├── ssd1306_i2c.h
+│ └── ssd1306_font.h
+├── hal/
+│ ├── AHT10.c # Leitura AHT10
+│ ├── BH1750.c # Leitura BH1750
+│ ├── BMP280.c # Leitura BMP280
+│ ├── buttons.c # Botoes A e B
+│ ├── i2c_setup.c # Configura porta i2c
+│ └── display.c # Funções do display OLED
+├── include/
+│ ├── AHT10.h
+│ ├── BH1750.h
+│ ├── BMP280.h
+│ ├── buttons.h
+│ ├── i2c_setup.h
+│ ├── FreeRTOSConfig.h
+│ ├── lwipopts.h
+│ └── display.h
+├── lib/
+│ ├── hw_config.h
+│ ├── sd_card.c
+│ └── sd_card.h
+├── no-OS-FatFS-SD-SPI-RPi-Pico/
+├── CMakeLists.txt
+└── README.md
+```  
+---
+
+
 ## **Referências**  
 
 - **Embrapa** –  Internet das Coisas testada em irrigação de precisão.  
