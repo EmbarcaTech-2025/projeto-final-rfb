@@ -39,6 +39,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | RF05 | Exibe dados dos sensores em uma tela. |  
 | RF06 | Armazenar os dados coletados no Cartão SD em intervalos de tempo. |  
 | RF07 | Mostrar o Status de Armazenamento, se gravou ou não. |  
+| RF08 | Ao pressionar o botão A, a tela deve alternar para a Tela 2 (valores). Ao pressionar o botão B, a tela deve alternar para a Tela 1 (status) |  
 
 ---
 
@@ -52,6 +53,28 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | RNF04 | Baixo consumo de energia. |  
 | RNF05 | O código deve ser modular. |  
 | RNF06 | O sistema deve operar continuamente. | 
+| RNF07 | O software deve ser implementado usando FreeRTOS, garantindo multitarefa e gerenciamento eficiente de tarefas concorrentes. | 
+
+---
+
+## 📦 **Lista de Materiais**  
+
+### 🧾 Tabela 3 - Lista de Materiais 
+| Item | Quantidade | Descrição |
+|------|------------|-----------|
+| Caixa de plástico ou madeira | 1 | Recipiente base para proteção dos componentes |
+| Placa BitDogLab com Raspberry Pi Pico W | 1 | Microcontrolador com periféricos integrados (OLED, botões) |
+| Placa Protoboard | 1 | conectada a entrada I2C0  |
+| Sensor de Temperatura e Pressão BMP280 | 1 | Sensor externo conectado via Placa Protoboard|
+| Sensor de Umidade e Temperatura AHT10 | 1 | Sensor externo conectado via Placa Protoboard |
+| Sensor de Luminosidade BH1750 | 1 | Sensor externo conectado via Placa Protoboard |
+| Placa para SDCARD SPI | 1 | Módulo externo conectado via conector IDC direto |
+| Cabos customizados XH I2C | 1 | Para conexão do sensore externos à BitDogLab |
+| Cabos jumper macho/femea | 4 | Para conexão da protoboard na entrada i2c0 da BitDogLab |
+| Cabos jumper macho/femea | 12 | Para conexão dos sensores na protoboard sensores externos à BitDogLab |
+| Fonte de energia (power bank ou bateria Li-ion) | 1 | Alimentação portátil para o sistema |
+| Botão A | 1 | Mudar Tela do Display oled |
+| Botão B | 1 | Mudar Tela do Display oled |
 
 ---
 
@@ -93,7 +116,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ### 📷 **Diagrama de Hardware**  
 
-![alt text](prototipo.jpeg)
+![alt text](prototipo2.jpeg)
 
 Explicação: Este diagrama detalha as conexões físicas e protocolos usados:
 
@@ -128,7 +151,7 @@ Observação: componente tem endereços específicos e frequências de operaçã
 
 ### Blocos funcionais ###
 
-![alt text](blocos_funcionais.jpeg)
+![alt text](bloco_funcional2.jpeg)
 
 O diagrama de blocos funcionais  apresentado ilustra a arquitetura do sistema da Estação Agroclimática Portátil, detalhando a integração entre seus principais componentes. No coração do sistema está a placa BitDogLab, responsável pelo processamento e gerenciamento das informações provenientes dos sensores e periféricos conectados. Os sensores ambientais, como o de umidade e temperatura (AHT10), luminosidade (BH1750) e pressão (BMP280), são ligados à protoboard, que atua como interface para o barramento I2C (GPIO 2 e 3). Essa configuração garante a leitura eficiente e simultânea dos dados ambientais, essenciais para o monitoramento climático.
 
@@ -141,7 +164,7 @@ Cada bloco funcional do sistema foi planejado para garantir modularidade, confia
 
 ### Fluxograma do software ###
 
-![alt text](Fluxograma.jpeg)
+![alt text](fluxograma_1.jpeg)
 
 O fluxograma apresentado descreve de forma clara e sequencial o funcionamento do sistema da Estação Agroclimática Portátil, evidenciando suas principais etapas de operação. O processo inicia-se com a inicialização do hardware e do display OLED, seguida pela exibição do estado dos sensores na tela. O sistema verifica a presença do cartão SD para garantir o armazenamento dos dados coletados: se o cartão não for detectado, é exibida uma mensagem de erro no display e, opcionalmente, pode ser ativado o envio dos dados via Wi-Fi (função ainda não implementada).
 

@@ -37,6 +37,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | RF05 | Exibe dados dos sensores em uma tela. |  
 | RF06 | Armazenar os dados coletados no Cartão SD em intervalos de tempo. |  
 | RF07 | Mostrar o Status de Armazenamento, se gravou ou não. |  
+| RF08 | Ao pressionar o botão A, a tela deve alternar para a Tela 2 (valores). Ao pressionar o botão B, a tela deve alternar para a Tela 1 (status) |  
 
 ---
 
@@ -50,10 +51,11 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | RNF04 | Baixo consumo de energia. |  
 | RNF05 | O código deve ser modular. |  
 | RNF06 | O sistema deve operar continuamente. | 
+| RNF07 | O software deve ser implementado usando FreeRTOS, garantindo multitarefa e gerenciamento eficiente de tarefas concorrentes. | 
 
 ---
 
-## 📦 **Lista de MAteriais**  
+## 📦 **Lista de Materiais**  
 
 ### 🧾 Tabela 3 - Lista de Materiais 
 | Item | Quantidade | Descrição |
@@ -69,6 +71,8 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | Cabos jumper macho/femea | 4 | Para conexão da protoboard na entrada i2c0 da BitDogLab |
 | Cabos jumper macho/femea | 12 | Para conexão dos sensores na protoboard sensores externos à BitDogLab |
 | Fonte de energia (power bank ou bateria Li-ion) | 1 | Alimentação portátil para o sistema |
+| Botão A | 1 | Mudar Tela do Display oled |
+| Botão B | 1 | Mudar Tela do Display oled |
 
 ---
 
@@ -91,7 +95,8 @@ Desenvolver uma mini-estação portátil e inteligente que:
 ## 📷 **Imagens e Esquemas**  
 
 ### **Diagrama do Protótipo**  
-![alt text](prototipo.jpeg)
+
+![alt text](prototipo2.jpeg)
 
 ---
 
