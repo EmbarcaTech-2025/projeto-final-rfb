@@ -8,27 +8,27 @@
 
 ---
 
-## 🎯 **Sobre este Repositório**  
+## 🎯 **Sobre este Repositório**  ##
 Este repositório contém o desenvolvimento da **Estação Agroclimática Portátil**, uma mini-estação portátil e inteligente projetada para monitorar as condições climáticas em pequenas plantações de agricultura familiar, incorporando sistemas eletrônicos embarcados e princípios de IoT (Internet das Coisas). O projeto se concentra no monitoramento em tempo real de parâmetros críticos, como temperatura, umidade, exposição à luz e pressão atmosférica, ao longo do tempo, possibilitando análises sazonais e tomadas de decisão mais precisas sobre quais tipos de cultura e época do ano são mais adequadas para o plantio.
 
 ---
 
-## 🛠️ **Visão geral do projeto**  
+## 🛠️ **Visão geral do projeto**  ##
 
-### **Descrição do problema**  
+### **Descrição do problema**  ###
 Produtores rurais de pequeno porte geralmente não têm acesso a dados meteorológicos locais precisos e contínuos. Essa limitação compromete o planejamento agrícola, principalmente em relação ao plantio, irrigação e colheita. Uma solução portátil e de baixo custo para coleta e visualização de dados ambientais pode trazer benefícios diretos ao desempenho e à sustentabilidade da produção.
 
-### ⚙️ **Objetivo da Solução**  
+### ⚙️ **Objetivo da Solução**  ###
 Desenvolver uma mini-estação portátil e inteligente que:
 - Monitore  **temperatura, umidade, luz e pressão** em tempo real.  
 - Emita  **na tela OLED** os dados coletados dos sesnores.  
-- Armazene **no cartão SD** todos os dados coletados pelos sensores durante o ano para futura analize.  
+- Armazene **no cartão SD** todos os dados coletados pelos sensores durante o ano para futura análise.  
 
 ---
 
-## ✅ **Requisitos Funcionais (RF)**  
+## ✅ **Requisitos Funcionais (RF)**  ##
 
-| Code | Functional Requirement |  
+| Código | Requisitos Funcionais |  
 |------|------------------------|  
 | RF01 | Coletar os Dados de Temperatura. |  
 | RF02 | Coletar os Dados de Pressão. |  
@@ -41,9 +41,9 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## 🚫 **Requisitos não Funcionais **  
+## 🚫 **Requisitos não Funcionais **  ##
 
-| Code | Non-Functional Requirement |  
+| Código | Requisitos Não Funcionais |  
 |------|---------------------------|  
 | RNF01 | Interface amigável para o usuario na tela Oled. |  
 | RNF02 | Sensores de alta precisão com tempo de resposta rápido. |  
@@ -55,9 +55,9 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## 📦 **Lista de Materiais**  
+## 📦 **Lista de Materiais**  ##
 
-### 🧾 Tabela 3 - Lista de Materiais 
+### 🧾 Tabela 3 - Lista de Materiais ###
 | Item | Quantidade | Descrição |
 |------|------------|-----------|
 | Caixa de plástico ou madeira | 1 | Recipiente base para proteção dos componentes |
@@ -67,7 +67,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | Sensor de Umidade e Temperatura AHT10 | 1 | Sensor externo conectado via Placa Protoboard |
 | Sensor de Luminosidade BH1750 | 1 | Sensor externo conectado via Placa Protoboard |
 | Placa para SDCARD SPI | 1 | Módulo externo conectado via conector IDC direto |
-| Cabos customizados XH I2C | 1 | Para conexão do sensore externos à BitDogLab |
+| Cabos customizados XH I2C | 1 | Para conexão dos sensores externos à BitDogLab |
 | Cabos jumper macho/fêmea | 4 | Para conexão da protoboard na entrada i2c0 da BitDogLab |
 | Cabos jumper macho/fêmea | 12 | Para conexão dos sensores na protoboard sensores externos à BitDogLab |
 | Fonte de energia (Power Bank ou bateria Li-ion) | 1 | Alimentação portátil para o sistema |
@@ -76,15 +76,15 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## **Estrutura do Projeto**  
+## **Estrutura do Projeto**  ##
 
-### **Principais Características**  
+### **Principais Características**  ###
 ✅ **Monitoramento em Tempo Real**: Sensores monitoram temperatura, umidade, luz e pressão atmosférica.  
 ✅ **Tela de informações**: Tela Oled com as informações dos sensores.  
 ✅ **Registro de Dados**: Armazena os dados em um cartão SD ou transmite dados para supervisão remota(Wi-fi).  
 ✅ **Operação Autônoma**: Alimentado por bateria ou Powerbank para portabilidade.  
 
-### **Fluxo de Trabalho do Sistema**  
+### **Fluxo de Trabalho do Sistema**  ###
 1. **Sensores** Coletam dados ambientais.  
 2. **BitDogLab (RP2040)** Processa dados e salva no Cartão SD.  
 3. **Display OLED** Mostra na tela os dados dos sensores.  
@@ -92,15 +92,15 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## 📷 **Imagens e Esquemas**  
+## 📷 **Imagens e Esquemas**  ##
 
-### **Diagrama do Protótipo**  
+### **Diagrama do Protótipo**  ###
 
 ![alt text](prototipo2.jpeg)
 
 ---
 
-## **Referências**  
+## **Referências**  ##
 
 - **Embrapa** –  Internet das Coisas testada em irrigação de precisão.  
 - **Blog Aegro**  – Irrigação de precisão: como ela pode gerar economia para a fazenda.
@@ -121,7 +121,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## **licença **  
+## **licença **  ##
 Este projeto está licenciado sob a **[MIT License](LICENSE)**.  
 
 ---  

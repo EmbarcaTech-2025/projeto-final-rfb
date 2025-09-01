@@ -10,7 +10,7 @@
 
 ---
 
-## **Sobre este Repositório**  
+## **Sobre este Repositório**  ##
 Este repositório contém o desenvolvimento da **Estação Agroclimática Portátil**, uma mini-estação portátil e inteligente projetada para monitorar as condições climáticas em pequenas plantações de agricultura familiar, incorporando sistemas eletrônicos embarcados e princípios de IoT (Internet das Coisas). O projeto se concentra no monitoramento em tempo real de parâmetros críticos, como temperatura, umidade, exposição à luz e pressão atmosférica, ao longo do tempo, possibilitando análises sazonais e tomadas de decisão mais precisas sobre quais tipos de cultura e época do ano são mais adequadas para o plantio.
 
 ---
@@ -22,15 +22,15 @@ Produtores rurais de pequeno porte geralmente não têm acesso a dados meteorol�
 
 ### ⚙️ **Objetivo da Solução**  ### 
 Desenvolver uma mini-estação portátil e inteligente que:
-- Monitore  **temperatura, humidade, luz e pressão** em tempo real.  
-- Emita  **Na tela OLED** os dados coletados dos sesnores.  
-- Armazene **No cartão SD** todos os dados coletados pelos sensores durante o ano para futura analize.  
+- Monitore  **temperatura, umidade, luz e pressão** em tempo real.  
+- Emita  **Na tela OLED** os dados coletados dos sensores.  
+- Armazene **No cartão SD** todos os dados coletados pelos sensores durante o ano para futura análise.  
 
 ---
 
 ## ✅ **Requisitos Funcionais (RF)**  ##
 
-| Code | Functional Requirement |  
+| Código | Requisitos Funcionais |  
 |------|------------------------|  
 | RF01 | Coletar os Dados de Temperatura. |  
 | RF02 | Coletar os Dados de Pressão. |  
@@ -45,7 +45,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ## 🚫 **Requisitos não Funcionais **  ##
 
-| Code | Non-Functional Requirement |  
+| Código | Requisitos Não Funcionais |  
 |------|---------------------------|  
 | RNF01 | Interface amigável para o usuario na tela Oled. |  
 | RNF02 | Sensores de alta precisão com tempo de resposta rápido. |  
@@ -69,7 +69,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | Sensor de Umidade e Temperatura AHT10 | 1 | Sensor externo conectado via Placa Protoboard |
 | Sensor de Luminosidade BH1750 | 1 | Sensor externo conectado via Placa Protoboard |
 | Placa para SDCARD SPI | 1 | Módulo externo conectado via conector IDC direto |
-| Cabos customizados XH I2C | 1 | Para conexão do sensore externos à BitDogLab |
+| Cabos customizados XH I2C | 1 | Para conexão dos sensores externos à BitDogLab |
 | Cabos jumper macho/femea | 4 | Para conexão da protoboard na entrada i2c0 da BitDogLab |
 | Cabos jumper macho/femea | 12 | Para conexão dos sensores na protoboard sensores externos à BitDogLab |
 | Fonte de energia (power bank ou bateria Li-ion) | 1 | Alimentação portátil para o sistema |
@@ -78,7 +78,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 
 ---
 
-## 📦 **Lista de MAteriais**  ##
+## 📦 **Lista de Materiais**  ##
 
 ### 🧾 Tabela 3 - Lista de Materiais ###
 | Item | Quantidade | Descrição |
@@ -147,9 +147,9 @@ Observação: componente tem endereços específicos e frequências de operaçã
 
 - O microcontrolador atua como unidade central, direcionando sinais e dados entre os sensores, a interface de usuário (display OLED, LEDs, botões) e o módulo de armazenamento ou comunicação remota. Os cuidados com proteção elétrica e disposição clara dos sinais contribuem para a confiabilidade do sistema em campo.
 
-- No seu projeto, essa arquitetura de hardware permite o monitoramento ambiental eficiente, coleta de dados precisa, armazenamento seguro em cartão SD e interfaces amigáveis ao usuário. Além disso, a flexibilidade de expansão, proporcionada por conectores e barramentos padrão, prepara o sistema tanto para operação autônoma quanto para integração com redes IoT e plataformas web, reforçando a aplicabilidade prática no contexto agrícola.
+- Neste projeto, essa arquitetura de hardware permite o monitoramento ambiental eficiente, coleta de dados precisa, armazenamento seguro em cartão SD e interfaces amigáveis ao usuário. Além disso, a flexibilidade de expansão, proporcionada por conectores e barramentos padrão, prepara o sistema tanto para operação autônoma quanto para integração com redes IoT e plataformas web, reforçando a aplicabilidade prática no contexto agrícola.
 
-### Blocos funcionais ###
+### Blocos Funcionais ###
 
 ![alt text](bloco_funcional2.jpeg)
 
@@ -168,7 +168,7 @@ Cada bloco funcional do sistema foi planejado para garantir modularidade, confia
 
 O fluxograma apresentado descreve de forma clara e sequencial o funcionamento do sistema da Estação Agroclimática Portátil, evidenciando suas principais etapas de operação. O processo inicia-se com a inicialização do hardware e do display OLED, seguida pela exibição do estado dos sensores na tela. O sistema verifica a presença do cartão SD para garantir o armazenamento dos dados coletados: se o cartão não for detectado, é exibida uma mensagem de erro no display e, opcionalmente, pode ser ativado o envio dos dados via Wi-Fi (função ainda não implementada).
 
-Se o cartão SD for reconhecido, o equipamento começa a salvar as medições ambientais automaticamente, permitindo que o usuário visualize os dados diretamente no display OLED ou, posteriormente, remova o cartão para analisar as informações em um computador. O fluxograma também contempla a interação por meio do Botão A, possibilitando ao usuário acessar mais dados no display conforme necessário. Dessa forma, o fluxograma retrata um fluxo funcional eficiente, que abrange as principais rotinas operacionais e alternativas do sistema, garantindo praticidade e facilidade de uso no campo.
+Se o cartão SD for reconhecido, o equipamento começa a salvar as medições ambientais automaticamente, permitindo que o usuário visualize os dados diretamente no display OLED ou, posteriormente, remova o cartão para analisar as informações em um computador. O fluxograma também contempla a interação por meio do Botão A e B, possibilitando ao usuário navegar no display e acessar mais dados conforme necessário. Dessa forma, o fluxograma retrata um fluxo funcional eficiente, que abrange as principais rotinas operacionais e alternativas do sistema, garantindo praticidade e facilidade de uso no campo.
 
 
 
@@ -178,7 +178,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 - SPI (Serial Peripheral Interface) — empregado para comunicação entre o microcontrolador e o leitor de cartão SD, garantindo um protocolo de alta velocidade para transferência de dados ao armazenar as informações coletadas.
 
-- Digital Input — para a leitura dos botões físicos (Botão A), representando uma entrada digital simples para interação do usuário.
+- Digital Input — para a leitura dos botões físicos (Botão A e B), representando uma entrada digital simples para interação do usuário.
 
 - Wi-Fi — comunicação sem fio para envio de dados via broker MQTT, possibilitando a transmissão das informações para uma interface web, viabilizando monitoramento remoto (em fase de implementação futura).
 
