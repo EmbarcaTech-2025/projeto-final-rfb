@@ -1,13 +1,14 @@
-# 🌾 ** Estação Agroclimática Portátil**  
+# 🌾 ** Estação Agroclimática Portátil**  #
 
 
-## 🎯 **Etapa 3 - Prototipagem e Ajustes **  
+## 🎯 **Etapa 3 - Prototipagem e Ajustes **  ##
 
-**Institution**: Instittuto Hardware BR-DF  
-**Course**: Residência tecnologica em sistemas embarcados
-**Authors**: **Rafael Florentino Barbosa**  
-**Location**: Brasília-DF  
-**Date**: Julho de 2025  
+**Instituição**: Instituto de Hardware BR-DF  
+**Curso**: Residência tecnologica em sistemas embarcados
+**Autor**: **Rafael Florentino Barbosa**  
+**Local**: Brasília-DF  
+**Data**: Julho de 2025  
+
 
 ---
 
@@ -33,9 +34,9 @@ Fotos:
 
 ![alt text](graficos.png)
 
-## 📊 Dados coletados
+## 📊 Dados coletados ##
 
-### Temperatura: 27,7 °C
+### Temperatura: 27,7 °C ###
 > Temperatura do ar ao redor do sensor.
 
 - Para a maioria das plantas tropicais e hortaliças, está em uma faixa boa (25–30 °C é ideal para crescimento).  
@@ -44,7 +45,7 @@ Fotos:
 
 ---
 
-### Umidade relativa: 32,4 %
+### Umidade relativa: 32,4 % ###
 > Mede quão úmido está o ar.
 
 - Esse valor é considerado baixo. A maioria das plantas gosta de 50–70 %.  
@@ -53,7 +54,7 @@ Fotos:
 
 ---
 
-### Luminosidade: ~104 lux
+### Luminosidade: ~104 lux ###
 > Intensidade de luz medida.
 
 - 104 lux é bem baixo — equivale a um ambiente fechado ou sombra pesada.  
@@ -65,7 +66,7 @@ Fotos:
 
 ---
 
-### Pressão atmosférica: 891,2 hPa
+### Pressão atmosférica: 891,2 hPa ###
 > Indica a pressão do ar no local.
 
 - O valor esperado ao nível do mar é ~1013 hPa.  
@@ -76,20 +77,20 @@ Fotos:
 
 ---
 
-## 🌾 Como usar esses dados na sua plantação
+## 🌾 Como usar esses dados na sua plantação ##
 
-### Temperatura e Umidade
+### Temperatura e Umidade ###
 - Programar alertas para irrigação se a umidade do ar ficar muito baixa por muito tempo.  
 - Detectar risco de estresse térmico em ondas de calor.
 
-### Luminosidade (Lux)
+### Luminosidade (Lux) ###
 - Verificar se as plantas estão recebendo luz suficiente para fotossíntese.  
 - Se valores ficarem baixos mesmo durante o dia:  
   - Reposicionar mudas para mais sol.  
   - Reduzir sombreamento.  
   - Usar iluminação artificial em estufas.
 
-### Pressão atmosférica
+### Pressão atmosférica  ###
 - Usar como indicador de previsão do tempo local:  
   - Queda repentina → possível chuva.  
   - Estabilidade → clima firme.  
@@ -97,7 +98,7 @@ Fotos:
 
 ---
 
-### 👉 Resumo
+### 👉 Resumo ###
 - **Temp/Umidade** → saúde da planta e evaporação.  
 - **Lux** → fotossíntese / energia disponível para crescimento.  
 - **Pressão** → previsão climática e ajuste da irrigação.

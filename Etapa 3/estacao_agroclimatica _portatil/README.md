@@ -2,7 +2,7 @@
 
 Este repositório contém o código-fonte e recursos para a implementação de uma **Estação Agroclimática Portátil**, desenvolvida como uma solução de monitoramento ambiental para a agricultura familiar. O sistema coleta, exibe e armazena dados climáticos essenciais (temperatura, umidade, luminosidade e pressão atmosférica) em tempo real, fornecendo informações críticas para o planejamento agronômico e tomada de decisões no campo.
 
-## 🚀 Funcionalidades
+## 🚀 Funcionalidades ##
 
 - Leitura de sensores ambientais através da interface I2C (AHT10, BH1750 e BMP280)
 - Exibição dos dados dos sensores em display OLED
@@ -10,7 +10,7 @@ Este repositório contém o código-fonte e recursos para a implementação de u
 - Suporte ao sistema operacional em tempo real (FreeRTOS)
 - Estrutura modular facilitando expansão de funcionalidades (Wi-Fi, interface web, etc.)
 
-## 📦 Organização do Projeto
+## 📦 Organização do Projeto ##
 
 - `drivers/` e `hal/` – Implementação dos drivers e camadas de abstração dos sensores e periféricos.
 - `lib/` – Funções de configuração de hardware e manipulação do cartão SD.
@@ -19,7 +19,7 @@ Este repositório contém o código-fonte e recursos para a implementação de u
 - `FreeRTOS-Kernel/` – Kernel do sistema operacional em tempo real (necessário clonar).
 - `no-OS-FatFS-SD-SPI-RPi-Pico/` – Biblioteca para comunicação com cartão SD (necessário clonar).
 
-## ⚙️ Como Compilar
+## ⚙️ Como Compilar ##
 
 Antes de compilar, é necessário clonar os repositórios de dependências na raiz do projeto:
 
@@ -36,7 +36,7 @@ cd build
 cmake ..
 make
 
-## 📂 Estrutura do Projeto  
+## 📂 Estrutura do Projeto  ##
 ```  
 ├── app/
 │ └── main.c # Programa principal
@@ -72,7 +72,7 @@ make
 ```  
 ---
 
-## 📊 Funcionamento  
+## 📊 Funcionamento  ##
 
   - Lê os sensores 
   - Exibe na tela old a tela 1, onde mostra os estatus dos sensores conectados
@@ -96,11 +96,11 @@ make
 ---
 
 
-## 📝 Observações Importantes
+## 📝 Observações Importantes ##
 
 - Certifique-se de que as bibliotecas estejam corretamente clonadas na raiz conforme indicado acima.
 
-## 📚 Referências e Créditos
+## 📚 Referências e Créditos ##
 
 - FreeRTOS: https://github.com/FreeRTOS/FreeRTOS-Kernel
 - no-OS-FatFS-SD-SPI-RPi-Pico: https://github.com/carlk3/no-OS-FatFS-SD-SPI-RPi-Pico
