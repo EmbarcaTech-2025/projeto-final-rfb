@@ -3,11 +3,11 @@
 
 ## 🎯 **Etapa 3 - Prototipagem e Ajustes **  ##
 
-**Instituição**: Instituto de Hardware BR-DF  
-**Curso**: Residência tecnologica em sistemas embarcados
-**Autor**: **Rafael Florentino Barbosa**  
-**Local**: Brasília-DF  
-**Data**: Julho de 2025  
+**Instituição**: Instituto de Hardware BR-DF.  
+**Curso**: Residência tecnologica em sistemas embarcados.
+**Autor**: **Rafael Florentino Barbosa**.  
+**Local**: Brasília-DF.  
+**Data**: Julho de 2025.
 
 
 ---
