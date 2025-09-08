@@ -194,7 +194,7 @@ Observação: componente tem endereços específicos e frequências de operaçã
 
 ### Blocos Funcionais ###
 
-![alt text](bloco_funcional2.jpeg)
+![alt text](bloco_funcional.jpeg)
 
 O diagrama de blocos funcionais  apresentado ilustra a arquitetura do sistema da Estação Agroclimática Portátil, detalhando a integração entre seus principais componentes. No coração do sistema está a placa BitDogLab, responsável pelo processamento e gerenciamento das informações provenientes dos sensores e periféricos conectados. Os sensores ambientais, como o de umidade e temperatura (AHT10), luminosidade (BH1750) e pressão (BMP280), são ligados à protoboard, que atua como interface para o barramento I2C (GPIO 2 e 3). Essa configuração garante a leitura eficiente e simultânea dos dados ambientais, essenciais para o monitoramento climático.
 
