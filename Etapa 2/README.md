@@ -198,9 +198,9 @@ Observação: componente tem endereços específicos e frequências de operaçã
 
 O diagrama de blocos funcionais  apresentado ilustra a arquitetura do sistema da Estação Agroclimática Portátil, detalhando a integração entre seus principais componentes. No coração do sistema está a placa BitDogLab, responsável pelo processamento e gerenciamento das informações provenientes dos sensores e periféricos conectados. Os sensores ambientais, como o de umidade e temperatura (AHT10), luminosidade (BH1750) e pressão (BMP280), são ligados à protoboard, que atua como interface para o barramento I2C (GPIO 2 e 3). Essa configuração garante a leitura eficiente e simultânea dos dados ambientais, essenciais para o monitoramento climático.
 
-O display OLED, conectado através da interface I2C1 (GPIO 14 e 15), exibe em tempo real os dados capturados pelos sensores, proporcionando ao usuário uma visualização clara das condições monitoradas. O sistema conta ainda com um leitor de cartão SD, conectado via SPI (GPIO 16, 17, 18 e 19), que armazena os registros dos dados para análises futuras. O botão A, conectado por entrada digital (GPIO 5), possibilita a interação direta do usuário, como por exemplo iniciar ou marcar eventos de coleta de dados.
+O display OLED, conectado através da interface I2C1 (GPIO 14 e 15), exibe em tempo real os dados capturados pelos sensores, status dos sensores, dados da Wi-Fi, e alertas climaticos, proporcionando ao usuário uma visualização clara das condições monitoradas. O sistema conta ainda com um leitor de cartão SD, conectado via SPI (GPIO 16, 17, 18 e 19), que armazena os registros dos dados para análises futuras. O botão A, conectado por entrada digital (GPIO 5), possibilita a interação direta do usuário, como por exemplo avançar de tela no display OLED.
 
-A solução também prevê conectividade remota por meio de um módulo Wi-Fi, permitindo o envio dos dados para um broker MQTT. Esse bloco possibilita a transmissão dos valores coletados para uma interface web, acessível via HTTP, ampliando as possibilidades de acompanhamento remoto e tomada de decisão baseada em dados em tempo real.
+A solução também prevê conectividade remota por meio de um módulo Wi-Fi, permitindo o envio dos dados para o site ThingSpeaker. Esse bloco possibilita a transmissão dos valores coletados para uma interface web, acessível via HTTP, gerando gráficos é ampliando as possibilidades de acompanhamento remoto e tomada de decisão baseada em dados em tempo real. Também e possivel notar o sistema de carregamento solar d painel até e da bateria.
 
 Cada bloco funcional do sistema foi planejado para garantir modularidade, confiabilidade e facilidade de manutenção, tornando a estação flexível para futuras expansões e adaptações conforme novas demandas de monitoramento agrícola surjam.
 
@@ -209,13 +209,13 @@ Cada bloco funcional do sistema foi planejado para garantir modularidade, confia
 
 ![alt text](fluxograma_1.jpeg)
 
-O fluxograma apresentado descreve de forma clara e sequencial o funcionamento do sistema da Estação Agroclimática Portátil, evidenciando suas principais etapas de operação. O processo inicia-se com a inicialização do hardware e do display OLED, seguida pela exibição do estado dos sensores na tela. O sistema verifica a presença do cartão SD para garantir o armazenamento dos dados coletados: se o cartão não for detectado, é exibida uma mensagem de erro no display e, opcionalmente, pode ser ativado o envio dos dados via Wi-Fi (função ainda não implementada).
+O fluxograma apresentado descreve de forma clara e sequencial o funcionamento do sistema da Estação Agroclimática Portátil, evidenciando suas principais etapas de operação. O processo inicia-se com a inicialização do hardware e do display OLED, seguida pela exibição do estado dos sensores na tela. O sistemaverifica se stá conectado a Wi-Fi, caso sim começa a enviar dados para o site Thingpeaker, que gerara gráficos. O sistema também verifica a presença do cartão SD para garantir o armazenamento dos dados coletados: se o cartão não for detectado, é exibida uma mensagem de erro no display e, opcionalmente, pode ser ativado o envio dos dados via Wi-Fi (função ainda não implementada). 
 
 Se o cartão SD for reconhecido, o equipamento começa a salvar as medições ambientais automaticamente, permitindo que o usuário visualize os dados diretamente no display OLED ou, posteriormente, remova o cartão para analisar as informações em um computador. O fluxograma também contempla a interação por meio do Botão A e B, possibilitando ao usuário navegar no display e acessar mais dados conforme necessário. Dessa forma, o fluxograma retrata um fluxo funcional eficiente, que abrange as principais rotinas operacionais e alternativas do sistema, garantindo praticidade e facilidade de uso no campo.
 
 
 
-### 🔧 Protocolos de Comunicação ###
+### 🔧 Protocolos de Comunicação 
 
 - I2C (Inter-Integrated Circuit) — utilizado para comunicação entre o microcontrolador BitDogLab e os sensores (AHT10, BH1750, BMP280) e também com o display OLED, permitindo comunicação serial síncrona entre múltiplos dispositivos.
 
@@ -223,17 +223,17 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 - Digital Input — para a leitura dos botões físicos (Botão A e B), representando uma entrada digital simples para interação do usuário.
 
-- Wi-Fi — comunicação sem fio para envio de dados via broker MQTT, possibilitando a transmissão das informações para uma interface web, viabilizando monitoramento remoto (em fase de implementação futura).
+- Wi-Fi — comunicação sem fio para envio de dados para o site ThingSpeaker, possibilitando a transmissão das informações para uma interface web, viabilizando monitoramento remoto (em fase de implementação futura).
 
-- HTTP — protocolo usado para o acesso e visualização dos dados armazenados no broker MQTT através de uma interface web.
+- HTTP — protocolo usado para o envio e a visualização dos dados no site ThingSpeaker.
 
-### Exemplo de Dashboard caso o modulo Wifi seja implementado no futuro ###
+### Exemplo de Dashboard caso o modulo Wifi seja implementado no futuro
 
 ![alt text](graficos.jpg)
 
 ## 📊 Dados coletados
 
-### Temperatura: 27,7 °C ###
+### Temperatura: 27,7 °C 
 > Temperatura do ar ao redor do sensor.
 
 - Para a maioria das plantas tropicais e hortaliças, está em uma faixa boa (25–30 °C é ideal para crescimento).  
@@ -242,7 +242,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### Umidade relativa: 32,4 % ###
+### Umidade relativa: 32,4 % 
 > Mede quão úmido está o ar.
 
 - Esse valor é considerado baixo. A maioria das plantas gosta de 50–70 %.  
@@ -251,7 +251,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### Luminosidade: ~104 lux ###
+### Luminosidade: ~104 lux 
 > Intensidade de luz medida.
 
 - 104 lux é bem baixo — equivale a um ambiente fechado ou sombra pesada.  
@@ -263,7 +263,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### Pressão atmosférica: 891,2 hPa ###
+### Pressão atmosférica: 891,2 hPa 
 > Indica a pressão do ar no local.
 
 - O valor esperado ao nível do mar é ~1013 hPa.  
@@ -274,20 +274,20 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-## 🌾 Como usar esses dados na sua plantação ##
+## 🌾 Como usar esses dados na sua plantação
 
-### Temperatura e Umidade ###
+### Temperatura e Umidade 
 - Programar alertas para irrigação se a umidade do ar ficar muito baixa por muito tempo.  
 - Detectar risco de estresse térmico em ondas de calor.
 
-### Luminosidade (Lux)  ###
+### Luminosidade (Lux)  
 - Verificar se as plantas estão recebendo luz suficiente para fotossíntese.  
 - Se valores ficarem baixos mesmo durante o dia:  
   - Reposicionar mudas para mais sol.  
   - Reduzir sombreamento.  
   - Usar iluminação artificial em estufas.
 
-### Pressão atmosférica ###
+### Pressão atmosférica 
 - Usar como indicador de previsão do tempo local:  
   - Queda repentina → possível chuva.  
   - Estabilidade → clima firme.  
@@ -295,12 +295,12 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-### 👉 Resumo ###
+### 👉 Resumo 
 - **Temp/Umidade** → saúde da planta e evaporação.  
 - **Lux** → fotossíntese / energia disponível para crescimento.  
 - **Pressão** → previsão climática e ajuste da irrigação.
 
-## 📂 Estrutura do Projeto   ##
+## 📂 Estrutura do Projeto  
 ```  
 ├── src/
 │ └── main.c # Programa principal
@@ -342,7 +342,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 ---
 
 
-## **Referências**  ##
+## Referências  
 
 - **Embrapa** –  Internet das Coisas testada em irrigação de precisão.  
 - **Blog Aegro**  – Irrigação de precisão: como ela pode gerar economia para a fazenda.
@@ -363,7 +363,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ---
 
-## **licença **  ##
+## licença 
 Este projeto está licenciado sob a **[MIT License](LICENSE)**.  
 
 ---  
