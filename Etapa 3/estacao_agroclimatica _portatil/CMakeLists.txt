@@ -48,9 +48,10 @@ add_executable(${ProjectName}
     ./hal/buttons.c
     ./hal/AHT10.c
     ./hal/BMP280.c
+    ./hal/thingspeak.c
     ./drivers/ssd1306_i2c.c
     ./lib/hw_config.c
-    ./lib/sd_card.c
+    ./lib/sd_card.c 
 )
 
 target_include_directories(${ProjectName} PRIVATE
