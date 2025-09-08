@@ -10,25 +10,37 @@
 
 ## 🎥 Fotos e Vídeos 
 
-Link Video: https://youtube.com/shorts/cSL2xntXBJg?feature=share
+Link Video: https://youtube.com/shorts/u5FrmjxMeAs?feature=share
 
 Fotos:
 
-- Estação Agroclimática Portátil em mdf
+- Estação Agroclimática Portátil em mdf Fechada
 
-![alt text](Protótipo.jpeg)
+![alt text](fechado.jpeg)
+
+- Estação Agroclimática Portátil em mdf Aberta
+
+![alt text](aberto.jpeg)
 
 - Tela 1 do diplay OLED
 
-![alt text](Tela1.jpeg)
+![alt text](<Tela 1.jpeg>)
 
 - Tela 2 do diplay OLED
 
-![alt text](Tela2.jpeg)
+![alt text](<Tela 2.jpeg>)
+
+- Tela 3 do diplay OLED
+
+![alt text](<Tela 3.jpeg>)
+
+- Tela 4 do diplay OLED
+
+![alt text](<Tela 4.jpeg>)
 
 -  Exemplo de Dashboard caso o modulo Wifi seja implementado no futuro 
 
-![alt text](graficos.png)
+![alt text](graficos.jpg)
 
 ## 📊 Dados coletados 
 
