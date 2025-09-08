@@ -46,10 +46,10 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | RF02   | Coletar os Dados de Pressão. |  
 | RF03   | Coletar os Dados de Umidade. |  
 | RF04   | Coletar os Dados de Luminosidade. |  
-| RF05   | Exibir dados dos sensores em uma tela. |  
+| RF05   | Exibir dados dos sensores, e da rede Wi-Fi em uma tela OLED. |  
 | RF06   | Armazenar os dados coletados no Cartão SD em intervalos de tempo. |  
 | RF07   | Mostrar o status de armazenamento, se gravou ou não. |  
-| RF08   | Ao pressionar o botão A, a tela deve avaçar para tela seguinte. Ao pressionar o botão B, a tela deve voltar sempre para a Tela 1 (status). |  
+| RF08   | Ao pressionar o botão A, a tela deve avançar para tela seguinte. Ao pressionar o botão B, a tela deve voltar sempre para a Tela 1 (status). |  
 | RF09   | Exibir mensagens de alerta na tela OLED quando condições críticas forem detectadas (ex.: risco de geada, fungos, calor excessivo, tendência de chuva). |  
 | RF10   | Enviar os dados por Wi-Fi para o site ThingSpeak. |  
 | RF11   | Recarregar a bateria com energia do painel solar através da BitDogLAb. |  
@@ -87,11 +87,11 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | Cabos customizados XH I2C | 1 | Para conexão dos sensores externos à BitDogLab |
 | Cabos jumper macho/fêmea | 4 | Para conexão da protoboard na entrada I2C0 |
 | Cabos jumper macho/fêmea | 12 | Para conexão dos sensores na protoboard |
-| Fonte de energia ( Bateria lítio 3,7V recarregável, Power Bank(Opcional)) | 1 | Alimentação portátil para o sistema |
-| Mini Painel solar 6V - 320 mA | 1 | Para carregar a BitDogLab que carregá a bateria de 3.7v da placa |
+| Bateria lítio 3,7V recarregável, Power Bank(Opcional) | 1 | Alimentação portátil para o sistema |
+| Mini Painel solar 6V - 320 mA | 1 | Para carregar a BitDogLab que carregará a bateria de 3.7v da placa |
 | Regulador de tensão LM7805 (5V / 1A) | 1 |Para conectar a Painel Solar a bitdolab pela protoboard |
-| Botão A | 1 | Alternar tela do display OLED |
-| Botão B | 1 | Alternar tela do display OLED |
+| Botão A | 1 | Avançar as telas do display OLED |
+| Botão B | 1 | Voltar a tela de status no display OLED |
 
 ---
 
