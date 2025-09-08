@@ -122,6 +122,12 @@ Temp: 28.95 | Umid: 26.89 | Press: 890.85 | Lux: 101.67
 Temp: 28.93 | Umid: 26.74 | Press: 890.77 | Lux: 103.33 
 Temp: 28.95 | Umid: 26.97 | Press: 887.80 | Lux: 103.80
 
+ou:
+
+Data,Hora,Temperatura(°C),Umidade(%),Pressão(hPa),Luminosidade(lux)
+05/09/2025,14:35:00,28.4,65,1012,1250
+05/09/2025,14:36:00,28.7,64,1011,1275
+
 ```
 ### Justificativa Técnica  
 - Leituras frequentes permitem detectar variações rápidas no microclima.  

@@ -34,6 +34,8 @@ Desenvolver uma mini-estação portátil e inteligente que:
 - Monitore **temperatura, umidade, luz e pressão** em tempo real.  
 - Emita na **tela OLED** os dados coletados dos sensores.  
 - Armazene no **cartão SD** todos os dados coletados pelos sensores durante o ano para futura análise.  
+- Envie por **Wi-Fi** todos os dados coletados pelos sensores para o site ThingSpeak, onde são gerados gráficos.  
+- Recarregue por **Painel Solar** a bateria que alimenta a BitDogLab.  
 
 ---
 
@@ -46,12 +48,14 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | RF02   | Coletar os Dados de Pressão. |  
 | RF03   | Coletar os Dados de Umidade. |  
 | RF04   | Coletar os Dados de Luminosidade. |  
-| RF05   | Exibir dados dos sensores em uma tela. |  
+| RF05   | Exibir dados dos sensores, e da rede Wi-Fi em uma tela OLED. |  
 | RF06   | Armazenar os dados coletados no Cartão SD em intervalos de tempo. |  
 | RF07   | Mostrar o status de armazenamento, se gravou ou não. |  
-| RF08   | Ao pressionar o botão A, a tela deve alternar para a Tela 2 (valores). Ao pressionar o botão B, a tela deve alternar para a Tela 1 (status). |  
+| RF08   | Ao pressionar o botão A, a tela deve avançar para tela seguinte. Ao pressionar o botão B, a tela deve voltar sempre para a Tela 1 (status). |  
 | RF09   | Exibir mensagens de alerta na tela OLED quando condições críticas forem detectadas (ex.: risco de geada, fungos, calor excessivo, tendência de chuva). |  
-| RF10   | Definir o intervalo de leitura dos sensores e o modo de gravação dos dados no cartão SD (individual ou em lotes). |  
+| RF10   | Enviar os dados por Wi-Fi para o site ThingSpeak. |  
+| RF11   | Recarregar a bateria com energia do painel solar através da BitDogLAb. |  
+| RF12   | Definir o intervalo de leitura dos sensores e o modo de gravação dos dados no cartão SD. |  
 
 ---
 
@@ -67,6 +71,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | RNF06  | O sistema deve operar continuamente. | Sistema deve funcionar por pelo menos 7 dias sem necessidade de reinicialização manual. |
 | RNF07  | O software deve ser implementado usando FreeRTOS, multitarefa. | Cada função crítica (coleta de dados, exibição, gravação em SD) deve rodar como tarefa independente, com prioridade definida. Scheduler deve garantir que leituras não atrasem mais que 1s. |
 | RNF08  | Clareza dos alertas exibidos. | Mensagens devem ser curtas (≤ 20 caracteres), exibidas por pelo menos 5 segundos e facilmente interpretáveis pelo agricultor. |
+| RNF09 | Sustentabilidade energética. | O sistema deve priorizar uso de energia solar sempre que disponível, reduzindo dependência de fontes externas. |
 
 ---
 
@@ -75,7 +80,7 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | Item | Quantidade | Descrição |
 |------|------------|-----------|
 | Caixa de plástico ou madeira | 1 | Recipiente base para proteção dos componentes |
-| Placa BitDogLab com Raspberry Pi Pico W | 1 | Microcontrolador com periféricos integrados (OLED, botões) |
+| Placa BitDogLab com Raspberry Pi Pico W | 1 | Microcontrolador com periféricos integrados (OLED, botões, Wi-Fi) |
 | Placa Protoboard | 1 | Conectada à entrada I2C0 |
 | Sensor de Temperatura e Pressão BMP280 | 1 | Sensor externo conectado via Protoboard |
 | Sensor de Umidade e Temperatura AHT10 | 1 | Sensor externo conectado via Protoboard |
@@ -84,9 +89,11 @@ Desenvolver uma mini-estação portátil e inteligente que:
 | Cabos customizados XH I2C | 1 | Para conexão dos sensores externos à BitDogLab |
 | Cabos jumper macho/fêmea | 4 | Para conexão da protoboard na entrada I2C0 |
 | Cabos jumper macho/fêmea | 12 | Para conexão dos sensores na protoboard |
-| Fonte de energia (Power Bank ou bateria Li-ion) | 1 | Alimentação portátil para o sistema |
-| Botão A | 1 | Alternar tela do display OLED |
-| Botão B | 1 | Alternar tela do display OLED |
+| Bateria lítio 3,7V recarregável, Power Bank(Opcional) | 1 | Alimentação portátil para o sistema |
+| Mini Painel solar 6V - 320 mA | 1 | Para carregar a BitDogLab que carregará a bateria de 3.7v da placa |
+| Regulador de tensão LM7805 (5V / 1A) | 1 |Para conectar a Painel Solar a bitdolab pela protoboard |
+| Botão A | 1 | Avançar as telas do display OLED |
+| Botão B | 1 | Voltar a tela de status no display OLED |
 
 ---
 
@@ -113,10 +120,18 @@ Desenvolver uma mini-estação portátil e inteligente que:
 - **Formato de gravação**: dados registrados em **CSV**, no padrão:  
 
 ```
+Temp: 28.95 | Umid: 26.89 | Press: 890.85 | Lux: 101.67 
+Temp: 28.93 | Umid: 26.74 | Press: 890.77 | Lux: 103.33 
+Temp: 28.95 | Umid: 26.97 | Press: 887.80 | Lux: 103.80
+
+ou:
+
 Data,Hora,Temperatura(°C),Umidade(%),Pressão(hPa),Luminosidade(lux)
 05/09/2025,14:35:00,28.4,65,1012,1250
 05/09/2025,14:36:00,28.7,64,1011,1275
+
 ```
+
 ### Justificativa Técnica  
 - Leituras frequentes permitem detectar variações rápidas no microclima.  
 - Armazenar em lotes reduz o desgaste do cartão SD e economiza energia.  
@@ -128,15 +143,16 @@ Data,Hora,Temperatura(°C),Umidade(%),Pressão(hPa),Luminosidade(lux)
 
 ### Principais Características  
 ✅ **Monitoramento em Tempo Real**: Sensores monitoram temperatura, umidade, luz e pressão atmosférica.  
-✅ **Tela de Informações**: Tela OLED com dados dos sensores.  
-✅ **Registro de Dados**: Armazena informações em cartão SD ou transmite via Wi-Fi (futuro).  
-✅ **Operação Autônoma**: Alimentado por bateria ou Powerbank para portabilidade.  
+✅ **Tela de Informações**: Tela OLED com dados dos sensores, da Wi-Fi, do cartão SD, dos Alertas.  
+✅ **Registro de Dados**: Armazena informações em cartão SD ou transmite via Wi-Fi.  
+✅ **Operação Autônoma**: Alimentado por bateria e recarregado com Painel Solar ou Powerbank para portabilidade.  
 
 ### Fluxo de Trabalho do Sistema  
 1. **Sensores** coletam dados ambientais.  
 2. **BitDogLab (RP2040)** processa dados e salva no cartão SD.  
 3. **Display OLED** exibe dados coletados.  
-4. **Conectividade Wi-Fi** (opcional) será implementada futuramente.  
+4. **Conectividade Wi-Fi** Manda os dados para o site ThingSpeak, para visualização de gráficos.  
+5. **Painel Solar + Bateria Li-Ion** garantem a autonomia energética da estação.
 ---
 
 ## Arquitetura do Sistema ##
@@ -213,7 +229,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ### Exemplo de Dashboard caso o modulo Wifi seja implementado no futuro ###
 
-![alt text](graficos.png)
+![alt text](graficos.jpg)
 
 ## 📊 Dados coletados
 
@@ -286,7 +302,7 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 
 ## 📂 Estrutura do Projeto   ##
 ```  
-├── app/
+├── src/
 │ └── main.c # Programa principal
 ├── drivers/
 │ ├── ssd1306.c # Driver OLED SSD1306
@@ -300,12 +316,15 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 │ ├── BMP280.c # Leitura BMP280
 │ ├── buttons.c # Botoes A e B
 │ ├── i2c_setup.c # Configura porta i2c
+│ ├── thingspeak.c # Configura a conexão com site
 │ └── display.c # Funções do display OLED
 ├── include/
 │ ├── AHT10.h
 │ ├── BH1750.h
 │ ├── BMP280.h
 │ ├── buttons.h
+│ ├── credentials.h
+│ ├── thingspeak.h
 │ ├── i2c_setup.h
 │ ├── FreeRTOSConfig.h
 │ ├── lwipopts.h
@@ -316,6 +335,8 @@ Se o cartão SD for reconhecido, o equipamento começa a salvar as medições am
 │ └── sd_card.h
 ├── no-OS-FatFS-SD-SPI-RPi-Pico/
 ├── CMakeLists.txt
+├── .gitignore
+├── pico_sdk_import.cmake
 └── README.md
 ```  
 ---
