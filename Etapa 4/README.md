@@ -384,6 +384,11 @@ Durante o desenvolvimento do protótipo da Estação Agroclimática Portátil, v
 ## Melhorias Planejadas 
 Entre as melhorias planejadas para as próximas versões do projeto está a utilização de uma placa PCB dedicada, o que ajudará a reduzir o excesso de fios, proporcionar maior confiabilidade das conexões e facilitar a montagem e manutenção do dispositivo. Está prevista também a implementação do módulo Wi-Fi para transmissão remota dos dados em tempo real, ampliando o potencial de monitoramento e automação agrícola. Outras melhorias incluem a adoção de um gabinete mais robusto e com melhor vedação para uso em ambientes externos, a otimização do consumo energético para aumentar a autonomia e a expansão do sistema de interface do usuário, tornando o display OLED ainda mais intuitivo e informativo.
 
+## 📌 Planejamento e Status do Projeto 
+O quadro abaixo resume o propósito, escopo, critérios de sucesso, ações, marcos e riscos do projeto, dando uma visão clara do que já foi feito e dos próximos passos:
+
+![alt text](<Project Canvas Template.jpg>)
+
 ## Referências  
 
 - **Embrapa** –  Internet das Coisas testada em irrigação de precisão.  
